@@ -13,7 +13,7 @@ namespace RogueTutorial
     {
         public Player() : base(Microsoft.Xna.Framework.Color.Pink, Microsoft.Xna.Framework.Color.Brown, 5) {
             Animation.CurrentFrame[0].Glyph = '!';
-            Animation.CurrentFrame[0].Foreground = Color.HotPink;
+            Animation.CurrentFrame[0].Foreground = Color.BlueViolet;
             
         }
         public int pGlyph { get { return Animation.CurrentFrame[0].Glyph; } set { Animation.CurrentFrame[0].Glyph = value; } }

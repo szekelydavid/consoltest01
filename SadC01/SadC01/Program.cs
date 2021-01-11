@@ -14,7 +14,7 @@ namespace RogueTutorial
 
         public int fee;
         public static MapScreen _mapscreen;
-        private static SadConsole.Entities.Entity _player { get; set; }
+        private static Player _player { get; set; }
 
         static void Main(string[] args)
         {
@@ -108,11 +108,13 @@ namespace RogueTutorial
             SadConsole.Global.CurrentScreen = startingConsole;
             var fontMasterPL = SadConsole.Global.LoadFont("Fonts/chess.font");
             var normalSizedFontPL = fontMasterPL.GetFont(Font.FontSizes.Four);
-           
+            //váltoZÁS
             // create an instance of player
             _player = new Player();
             _player.Font = normalSizedFontPL;
-            _player.Position = new Point(5, 5);
+            _player.Position = new Point(5, 8);
+            _player.pGlyph = 13;
+            _player.Animation.CurrentFrame[0].Foreground = Color.Green;
             // add the player Entity to our only console
             // so it will display on screen
             startingConsole.Children.Add(_player);
